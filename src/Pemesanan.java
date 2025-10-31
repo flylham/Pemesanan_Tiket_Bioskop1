@@ -37,4 +37,16 @@ public class Pemesanan {
         }
         return total;
     }
+
+    public void cetakStruk() {
+        System.out.println("\n=== STRUK PEMBELIAN ===");
+        System.out.println("Film : " + film.getJudul());
+        System.out.println("Jumlah tiket : " + jumlahTiket);
+        System.out.println("Member : " + (memberBioskop ? "Ya" : "Tidak"));
+        System.out.println("Total Bayar : Rp " + hitungTotal());
+
+        if ((film.getHarga() * jumlahTiket) > BATAS_DISKON && memberBioskop) {
+            System.out.println("Anda mendapatkan diskon 10%");
+        }
+    }
 }

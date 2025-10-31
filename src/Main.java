@@ -24,5 +24,6 @@ public class Main {
         Pemesanan pesanan = new Pemesanan(film, jumlah, member);
 
         System.out.println("Total harga yang harus dibayar: Rp " + pesanan.hitungTotal());
+        pesanan.cetakStruk();
     }
 }
